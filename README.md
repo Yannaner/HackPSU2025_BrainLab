@@ -1,4 +1,4 @@
-# BrainLabs: Decentralized Machine Learning on Physical Circuit
+# Brain Labs: Cloud-Enabled Physical Learning 
 
 ![BrainLabs Circuit](https://github.com/user-attachments/assets/ccba09e7-4662-468a-9273-e45ab17cad0b)
 
@@ -15,24 +15,18 @@
 
 ## Inspiration 🧠
 
-Inspired by recent advances in **decentralized physics-driven learning** and biological neural systems, BrainLabs rethinks machine learning at its core. Instead of relying on massive GPU clusters or von Neumann architectures, we designed a system where **computation and learning are performed directly on a physical circuit**, akin to how the brain's synapses adapt using only local information.
+As student researchers, we're inspired by recent advances in *decentralized physics-driven learning* research. We believe systems that can carry out *computations and learning directly on a physical circuit*  instead of relying on massive GPU clusters holds the key to a sustainable AI future and therefore wanted to be the first ones to democratize this technology to anyone interested through a cloud platform. 
 
-We took inspiration from [Dillavou et al., 2022] and the **contrastive coupled learning** framework, which showed that networks can self-organize by simply comparing free and clamped states—no global processor, no memory overhead, no backpropagation.
+We took inspiration from the work of Dillavou et al. (*Demonstration of Decentralized Physics-Driven Learning*, Phys. Rev. Applied, 2022), which showed the possibility of *in-situ* physical-learning with coupled learning.
 
 ---
 
 ## What It Does ⚡
 
-BrainLabs is a fully functional **physical learning system**:
-- A resistor network acts as the equivalent of a neural network.
-- Learning happens by adjusting resistance values via digital potentiometers.
-- Comparators and XOR gates implement a decentralized version of contrastive learning.
-- All updates are local — each “edge” (connection) only looks at its own state.
-- The learning rule mimics **energy minimization** seen in biological and mechanical systems.
-
-In short, BrainLabs is an electronic material that learns by adjusting itself, directly and physically.
-
-To make it accessible, we've built a modern, cloud-enabled interface where users can upload datasets, watch the system train in real time, and interact directly with the hardware over the web.
+Brain Labs is a fully-functional **physical learning system** connected to a **cloud platform**: 
+- A physical, self-adjusting resistor network acts as the equivalent of a neural network
+- Learning happens locally by adjusting resistance values via digital potentiometers
+- A **user-friendly cloud platform** that allows users to upload datasets, train models, and conduct inference on our physical learning network based on their data, similar to a GPU cloud
 
 ---
 
@@ -40,7 +34,7 @@ To make it accessible, we've built a modern, cloud-enabled interface where users
 
 ![BrainLabs Circuitry](https://github.com/user-attachments/assets/09cadc13-7671-4554-a535-aacfade72056)
 
-The heart of BrainLabs is a **twin-network architecture**: one network for the free state, and another for the clamped state. This implementation allows us to apply contrastive learning in real physical systems by comparing how the circuit behaves under two boundary conditions.
+Brain Labs uses a **twin-edge network**: one network for the free state, and another for the clamped state. This implementation allows us to apply contrastive learning in real physical systems by comparing how the circuit behaves under two boundary conditions. 
 
 Each edge contains:
 - A pair of digital potentiometers (for the free and clamped states)
@@ -62,35 +56,33 @@ The system is orchestrated by:
 ## Challenges We Encountered ⚙️
 ![image](https://github.com/user-attachments/assets/3425e5a0-ac50-41dc-a37a-6196f42c00dd)
 
-Precision is paramount in analog learning. Even small voltage fluctuations introduced noise that could destabilize training. Implementing the **discrete contrastive learning rule** using real-world comparators and XOR logic required careful handling to ensure the system remained responsive without becoming unstable.
+Precision is paramount in analog learning. Even small voltage fluctuations introduced noise that could destabilize training. Implementing the **discrete contrastive learning rule** using real-world comparators and XOR logic required careful handling to ensure the system remained responsive without becoming unstable. 
 
-Another challenge was ensuring real-time synchronization between the hardware and the frontend without introducing noticeable latency — something we solved through lightweight protocols and smart clocking.
+One challenge that we encountered was that we had to work with inconsistent equipments. Since we had a limited supplies of comparators and had to build a network with four resistor edges, each of which uses a comparator, we had to compensate by using different types of comparators with different pinout diagrams. This made it difficult to test for errors, especially when working with a fully-integrated network.
+
+Additionally, we had to compensate for a broken Arduino DUE, which we originally wanted to use for its onboard Digital to Analog convertors (DACs), by building out additional DAC circuits.
 
 ---
 
 ## Achievements We’re Proud Of 🥇
 
-- We successfully realized a **fully decentralized, physics-driven learning system**.
-- Achieved functional training using only **local voltage-based updates**, with no global cost function.
-- Built a web interface that allows non-experts to upload datasets, configure experiments, and visualize learning outcomes.
-- Demonstrated that the system is **robust to edge failures**, showing graceful degradation, not catastrophic collapse — an attribute inherited directly from the biological and mechanical learning systems we were inspired by.
+- We are the first people to implement a fully decentralized, physics driven learning network on a cloud platform that allows anyone from anywhere to use
+- We built a physical learning network of four self-adjusting resistor edges that is able to learn without a processor
+- We built a web interface that allows non-experts to upload datasets, configure experiments, and visualize learning outcomes. 
 
 ---
 
 ## Insights 💡
 
-The project reaffirmed the power of **contrastive coupled learning** (Stern et al.) in real circuits. Local update rules, when physically realized, can induce global learning behavior that is resilient, scalable, and interpretable.
-
-We also observed that analog systems are naturally suited for **energy minimization**, suggesting that physical AI could be a natural fit for future edge devices and embedded intelligence, especially when energy efficiency is crucial.
+The project reaffirmed the potential of **physical learning networks** to be a viable and scalable solution to the growing demands of artificial intelligence. 
 
 ---
 
 ## What’s Next 🚀
 
 We're currently working towards:
-- **Fabrication of custom ICs** to scale the network beyond breadboards.
-- Extending BrainLabs to **perform classification, regression, and allosteric tasks** as shown in the research literature.
-- Exploring desynchronous learning, non-equilibrium propagation, and other biologically-inspired rules, building directly on the latest advances in **physics-based learning machines**.
+- Extending Brain Labs to perform more complex machine learning tasks such as multi-class classification and regression.
+- Shifting Brain Labs from breadboard implementation to custom PCB and ultimately IC implementation for increased scalability. 
 
 We envision BrainLabs as the foundation for **next-generation neuromorphic hardware** that is scalable, sustainable, and elegantly simple.
 
