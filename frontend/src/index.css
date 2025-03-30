@@ -1,0 +1,104 @@
+:root {
+  --primary-green: #1e4e91;
+  --secondary-green: #2d6bc4;
+  --dark-green: #0d2444;
+  --light-green: rgba(30, 78, 145, 0.1);
+  --white: #ffffff;
+  --off-white: #f5f5f5;
+  --text-dark: #e0e0e0;
+  --text-light: #ffffff;
+  --bg-dark: #0a1a2e;
+  --bg-light: #0d2444;
+  --bg-gradient: linear-gradient(135deg, var(--bg-dark) 0%, #153456 100%);
+  --card-bg: rgba(10, 26, 46, 0.8);
+
+  --primary-color: #1e4e91;
+  --secondary-color: #2d6bc4;
+  --hover-color: #153456;
+
+  --accent-primary: #1e4e91;
+  --accent-secondary: #2d6bc4;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --border-primary: rgba(30, 78, 145, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.9);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+
+  --gradient-blue: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --gradient-purple: linear-gradient(135deg, var(--accent-secondary), #7e57c2);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hover-color);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  display: block;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--primary-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  a:hover {
+    color: var(--secondary-color);
+  }
+  button {
+    background-color: var(--background-color);
+  }
+}

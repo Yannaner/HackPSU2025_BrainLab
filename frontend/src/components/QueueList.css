@@ -1,0 +1,154 @@
+.queue-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.queue-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-primary);
+  padding-bottom: 1rem;
+}
+
+.queue-header h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.queue-summary {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.queue-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 2px dashed var(--border-primary);
+}
+
+.queue-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.queue-empty-sub {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.queue-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-primary);
+  transition: transform 0.2s ease;
+}
+
+.queue-item:hover {
+  transform: translateY(-2px);
+}
+
+.queue-item.training {
+  border-left: 4px solid var(--accent-primary);
+  background: linear-gradient(to right, rgba(0, 204, 142, 0.05), transparent);
+}
+
+.queue-item.queued {
+  border-left: 4px solid var(--text-secondary);
+}
+
+.queue-item-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.queue-status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.queue-status-badge.training {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.queue-status-badge.queued {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.queue-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  font-weight: 500;
+}
+
+.status-training {
+  color: var(--accent-primary);
+}
+
+.status-queued {
+  color: var(--text-secondary);
+}
+
+.queue-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.queue-item-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.queue-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.queue-item-details {
+  display: flex;
+  gap: 2rem;
+}
+
+.queue-type, .queue-status {
+  color: var(--text-secondary);
+}
+
+.queue-item.training .queue-status {
+  color: var(--accent-primary);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+}
