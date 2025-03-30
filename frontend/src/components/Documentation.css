@@ -1,0 +1,139 @@
+.documentation-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.documentation-header {
+  margin-bottom: 3rem;
+}
+
+.documentation-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.documentation-intro {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.resource-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(30, 78, 145, 0.1);
+}
+
+.resource-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(30, 78, 145, 0.15);
+}
+
+.resource-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.resource-card.blue::after {
+  background: linear-gradient(90deg, #1e4e91, #2d6bc4);
+}
+
+.resource-card.purple::after {
+  background: linear-gradient(90deg, #7e57c2, #5e35b1);
+}
+
+.resource-card.green::after {
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+}
+
+.resource-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.resource-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.resource-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+  border-bottom-color: var(--accent-primary);
+}
+
+.resource-link .arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.resource-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.additional-info {
+  background: linear-gradient(to right, rgba(30, 78, 145, 0.05), transparent);
+  border-radius: 15px;
+  padding: 2.5rem;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.additional-info h3 {
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.additional-info p {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-card p {
+    min-height: auto;
+  }
+}
