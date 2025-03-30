@@ -10,6 +10,7 @@
 [![PySerial](https://img.shields.io/badge/PySerial-3776AB?logo=python&logoColor=white)](https://github.com/pyserial/pyserial)
 [![ngrok](https://img.shields.io/badge/ngrok-1F1E37?logo=ngrok&logoColor=white)](https://ngrok.com/)
 [![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=firebase&logoColor=white)](https://firebase.google.com)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 
 ---
 
